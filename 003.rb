@@ -1,16 +1,3 @@
-def multiples_of(i,max)
-  return (2..max/i).collect { |x| x*i }
-end
-
-def prime_sieve(max)
-  (2..max).each { |i|
-    if prime_map[i]
-      puts "+++++"+i.to_s+"+++++"
-      multiples_of(i,max).each { |x| prime_map[x]=false }
-    end
-  }
-  return prime_map
-end
 
 def is_prime(x)
   if(x==1) 
